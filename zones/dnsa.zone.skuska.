@@ -1,0 +1,16 @@
+$ORIGIN skuska.
+$TTL 1D                  ; default expiration time of all resource records without their own TTL value
+@  IN  SOA  mega ziadny (
+              201107091 ; serial number of this zone file
+              8H         ; slave refresh (1 day)
+              4H         ; slave retry time in case of a problem (2 hours)
+              4W         ; slave expiration time (4 weeks)
+              1D         ; maximum caching time in case of failed lookups (1 hour)
+              )
+
+
+  NS    mega
+
+mega  A    172.17.241.253
+
+uplnemega  A    172.17.241.253

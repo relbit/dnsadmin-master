@@ -1,0 +1,7 @@
+
+zone "testdom." {
+    type master;
+    file "dnsa.zone.testdom.";
+    allow-transfer { 172.17.241.252; };
+    also-notify { 172.17.241.252; };
+};

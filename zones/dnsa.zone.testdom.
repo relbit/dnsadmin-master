@@ -1,0 +1,18 @@
+$ORIGIN testdom.
+$TTL 1D                  ; default expiration time of all resource records without their own TTL value
+@  IN  SOA  d1 ziadny (
+              2012021523 ; serial number of this zone file
+              8H         ; slave refresh (1 day)
+              4H         ; slave retry time in case of a problem (2 hours)
+              4W         ; slave expiration time (4 weeks)
+              1D         ; maximum caching time in case of failed lookups (1 hour)
+              )
+
+
+        IN    NS    d1
+
+d1        IN    A    172.17.241.253
+
+d2        IN    A    172.17.241.253
+
+d4        IN    CNAME    d1

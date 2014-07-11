@@ -1,0 +1,28 @@
+DNS zone file json format
+
+{
+	origin: "",  					// example.com.
+	ttl: "",						// 1h 
+	soa: {				
+		address: "",				// example.com.
+		ns: "",						// ns.example.com.
+		email: "",					// admin.example.com. (@ sign is replaced by period)
+		serialNumber: "",			// 2007120710
+		slaveRefresh: "",			// 1d
+		slaveRetry: "",				// 2h
+		slaveExpiration: "",		// 4w
+		maxCacheTime: ""			// 1h
+	},
+	slaves: [
+		"1.2.3.4",
+		"2.3.4.5"
+	],
+	records: [
+		{
+			name: "",				// example.com., @, www, mail, ...
+			ttl: "",
+			rtype: "",       // A, CNAME, NS, MX, AAAA, ...
+			address: ""     // 192.168.1.1
+		}
+	]
+}

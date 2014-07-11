@@ -1,0 +1,7 @@
+
+zone "<%= @data["origin"] %>" {
+    type master;
+    file "dnsa.zone.<%= @data["origin"] %>";
+    allow-transfer { <% 	@data["slaves"].each do |slave| %><%= slave %>; <% end %>};
+    also-notify { <% 	@data["slaves"].each do |slave| %><%= slave %>; <% end %>};
+};

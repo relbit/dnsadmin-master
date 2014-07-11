@@ -1,0 +1,6 @@
+
+zone "skuska2." {
+    type master;
+    file "dnsa.zone.skuska2.";
+    allow-transfer { 1.2.3.4; 2.3.4.5; };
+};

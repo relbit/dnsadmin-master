@@ -1,0 +1,13 @@
+$ORIGIN <%= @data["origin"] %>
+$TTL <%= @data["ttl"] %>                  ; default expiration time of all resource records without their own TTL value
+<%= @data["soa"]["address"] %>  IN  SOA  <%= @data["soa"]["ns"] %> <%= @data["soa"]["email"] %> (
+              <%= @data["soa"]["serialNumber"] %> ; serial number of this zone file
+              <%= @data["soa"]["slaveRefresh"] %>         ; slave refresh (1 day)
+              <%= @data["soa"]["slaveRetry"] %>         ; slave retry time in case of a problem (2 hours)
+              <%= @data["soa"]["slaveExpiration"] %>         ; slave expiration time (4 weeks)
+              <%= @data["soa"]["maxCacheTime"] %>         ; maximum caching time in case of failed lookups (1 hour)
+              )
+
+<% 	@data["records"].each do |record| %>
+<%= record["name"] %>    <%= record["ttl"] %>    IN    <%= record["rtype"] %>    <%= record["address"] %>
+<% end %>

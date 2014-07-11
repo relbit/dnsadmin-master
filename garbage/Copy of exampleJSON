@@ -1,0 +1,43 @@
+{
+	"origin": "skuska.",
+	"ttl": "1D",
+	"soa": {				
+		"address": "@",
+		"ns": "mega",
+		"email": "ziadny",
+		"serialNumber": "201107091",
+		"slaveRefresh": "8H",
+		"slaveRetry": "4H",
+		"slaveExpiration": "4W",
+		"maxCacheTime": "1D"
+	},
+	"records": [
+		{
+			"name": "",
+			"entries": [
+				{
+					"type": "NS",
+					"address": "mega"
+				}
+			]
+		},
+		{
+			"name": "mega",
+			"entries": [
+				{
+					"type": "A",
+					"address": "172.17.241.253"
+				}
+			]
+		},
+		{
+			"name": "uplnemega",
+			"entries": [
+				{
+					"type": "A",
+					"address": "172.17.241.253"
+				}
+			]
+		}
+	]
+}

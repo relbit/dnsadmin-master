@@ -1,0 +1,27 @@
+environment: production
+port: 7005
+address: 127.0.0.1
+chdir: /home/igi/workspace/DNS_Admin
+pid: /home/igi/workspace/DNS_Admin/thin.pid
+rackup: /home/igi/workspace/DNS_Admin/config.ru
+log: /home/igi/workspace/DNS_Admin/thin.log
+max_conns: 1000
+timeout: 30
+max_persistent_conns: 512
+#daemonize: true
+
+tpl_path: "./templates"
+zf_path: "./zones"
+data_path: "./db"
+n_path: "./named"
+n_master: "named.dnsadmin.conf"
+command: "sudo service named reload"
+z_pref: "dnsa.zone."
+z_check_pref: "dnsa.check.zone."
+n_pref: "named.dnsa.conf."
+tmp_path: "./tmp"
+check_command: "named-checkzone -q %s %s"
+data_pref: "data."
+users:
+  admin: test
+  admin2: test2
